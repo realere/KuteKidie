@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KuteKidie</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class='login'>
+  <% if current_user %>
+    <%= current_user.email %>
+    <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+  <% else %>
+    <%= link_to "Sign In", new_user_session_path %>
+    <%= link_to "Register", new_user_registration_path %>
+  <% end %>
+</div>
+<nav>
+ <ul>
+ <p class="notice"><%= notice %></p>
+ <p class="alert"><%= alert %></p>
+
+  <li class="home"><%= link_to "Home", root_path%></li>
+  <li class="catergories"><%= link_to "Categories", categories_path %></li>
+  <li class="babysitters"><%= link_to "Babysitters", babysitters_path %></li>
+</ul>
+</nav> 
+
+<%= yield %>
+
+</body>
+</html>
