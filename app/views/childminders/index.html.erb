@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Childminders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>No of children</th>
+      <th>Phone number</th>
+      <th>Email</th>
+      <th>Location</th>
+      <th>Rating</th>
+      <th>About me</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @childminders.each do |childminder| %>
+      <tr>
+        <td><%= childminder.name %></td>
+        <td><%= childminder.no_of_children %></td>
+        <td><%= childminder.phone_number %></td>
+        <td><%= childminder.email %></td>
+        <td><%= childminder.location %></td>
+        <td><%= childminder.rating %></td>
+        <td><%= childminder.about_me %></td>
+        <td><%= link_to 'Show', childminder %></td>
+        <td><%= link_to 'Edit', edit_childminder_path(childminder) %></td>
+        <td><%= link_to 'Destroy', childminder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Childminder', new_childminder_path %>

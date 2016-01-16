@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @childminder.name %>
+</p>
+
+<p>
+  <strong>No of children:</strong>
+  <%= @childminder.no_of_children %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @childminder.phone_number %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @childminder.email %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @childminder.location %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @childminder.rating %>
+</p>
+
+<p>
+  <strong>About me:</strong>
+  <%= @childminder.about_me %>
+</p>
+
+<%= link_to 'Edit', edit_childminder_path(@childminder) %> |
+<%= link_to 'Back', childminders_path %>

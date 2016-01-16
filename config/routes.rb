@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
  resources :babysitters
  resources :categories
+ resources :childminders
 
   # devise_for :users
   # resources :events
@@ -18,7 +19,7 @@ Rails.application.routes.draw do
     get '/welcome', to: 'home#welcome'
     get '/categories', to: 'home#categories'
     get '/babysitters', to: 'home#babysitters'
-    # get '/search', to: 'home#search'
+    get '/childminders', to: 'home#childminders'
     # get '/venues', to: 'home#venues'
     # get '/artists', to: 'home#artists '
     # get '/Tickets', to: 'home#tickets'

@@ -6,7 +6,6 @@ class CreateBabysitters < ActiveRecord::Migration
       t.string :email
       t.string :location
       t.text :about_me
-      t.integer :user_id
       t.integer :category_id
 
       t.timestamps null: false

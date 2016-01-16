@@ -14,6 +14,10 @@ class HomeController < ApplicationController
     
   end
   
+  def childminders
+    
+  end
+  
   
   
   def search
@@ -21,6 +25,8 @@ class HomeController < ApplicationController
 
     when 'categories' then redirect_to(categories_path)
     when 'babysitters' then redirect_to(babysitters_path)
+    when 'childminders' then redirect_to(childminders_path)
+      
     
     else render :welcome
         
