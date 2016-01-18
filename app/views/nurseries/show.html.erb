@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @nursery.name %>
+</p>
+
+<p>
+  <strong>Age group:</strong>
+  <%= @nursery.age_group %>
+</p>
+
+<p>
+  <strong>No of staff:</strong>
+  <%= @nursery.no_of_staff %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @nursery.phone_number %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @nursery.email %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @nursery.location %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @nursery.rating %>
+</p>
+
+<p>
+  <strong>Available space:</strong>
+  <%= @nursery.available_space %>
+</p>
+
+<p>
+  <strong>About us:</strong>
+  <%= @nursery.about_us %>
+</p>
+
+<%= link_to 'Edit', edit_nursery_path(@nursery) %> |
+<%= link_to 'Back', nurseries_path %>

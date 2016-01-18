@@ -4,6 +4,8 @@ Rails.application.routes.draw do
  resources :babysitters
  resources :categories
  resources :childminders
+ resources :nurseries
+ resources :nannies
 
   # devise_for :users
   # resources :events
@@ -17,10 +19,13 @@ Rails.application.routes.draw do
 
    root to: 'home#babysitters'
     get '/welcome', to: 'home#welcome'
+    get '/nurseries', to: 'home#nurseries'
     get '/categories', to: 'home#categories'
     get '/babysitters', to: 'home#babysitters'
     get '/childminders', to: 'home#childminders'
-    # get '/venues', to: 'home#venues'
+    get '/nannies', to: 'home#nannies'
+
+    
     # get '/artists', to: 'home#artists '
     # get '/Tickets', to: 'home#tickets'
   # The priority is based upon order of creation: first created -> highest priority.
