@@ -22,6 +22,10 @@ class HomeController < ApplicationController
     
   end
   
+  def locations
+    
+  end
+  
   
   
   def search
