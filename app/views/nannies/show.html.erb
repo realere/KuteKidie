@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
-
+  <p>
+    <b>Image:</b>
+    <%= image_tag @nanny.nanny_image.url %>
+    <%= link_to image_tag(@nanny.nanny_image.thumb.url), @nanny.nanny_image.medium.url %>
+</p>
 <p>
   <strong>Name:</strong>
   <%= @nanny.name %>

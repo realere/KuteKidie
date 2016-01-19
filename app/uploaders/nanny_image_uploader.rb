@@ -1,8 +1,8 @@
 # encoding: utf-8
 
-class BabysitterImageUploader < CarrierWave::Uploader::Base
+class NannyImageUploader < CarrierWave::Uploader::Base
 
-  # Include RMagick or MiniMagick support:
+  #Include RMagick or MiniMagick support:
   include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
 
@@ -15,6 +15,7 @@ class BabysitterImageUploader < CarrierWave::Uploader::Base
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
+
 
   version :thumb do
     process :resize_to_fill => [100, 100]

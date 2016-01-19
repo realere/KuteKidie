@@ -10,6 +10,15 @@
       </ul>
     </div>
   <% end %>
+  <div class="field">
+    <%= f.label :remote_nanny_image_url %><br />
+    <%= f.text_field :remote_nanny_image_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nanny_image %><br />
+    <%= f.file_field :nanny_image %>
+  </div>
 
   <div class="field">
     <%= f.label :name %><br>

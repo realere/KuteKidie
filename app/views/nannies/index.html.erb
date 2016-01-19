@@ -21,6 +21,7 @@
   <tbody>
     <% @nannies.each do |nanny| %>
       <tr>
+        <td><%= image_tag nanny.nanny_image.url %></td>
         <td><%= nanny.name %></td>
         <td><%= nanny.age %></td>
         <td><%= nanny.no_of_children %></td>
