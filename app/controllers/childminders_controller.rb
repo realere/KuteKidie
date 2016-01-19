@@ -69,6 +69,7 @@ class ChildmindersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def childminder_params
-      params.require(:childminder).permit(:name, :no_of_children, :phone_number, :email, :location, :rating, :about_me)
+      params.require(:childminder).permit(:name, :no_of_children, :phone_number, :email, :location, :rating, :about_me, :childminder_image, :remote_childminder_image_url)
+  
     end
 end

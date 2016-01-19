@@ -69,6 +69,6 @@ class BabysittersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def babysitter_params
-      params.require(:babysitter).permit(:name, :phone, :email, :location, :about_me)
+      params.require(:babysitter).permit(:name, :phone, :email, :location, :about_me, :babysitter_image, :remote_babysitter_image_url)
     end
 end

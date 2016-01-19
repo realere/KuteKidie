@@ -11,10 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160118151102) do
+ActiveRecord::Schema.define(version: 20160119102906) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "babysitter_children", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "babysitters", force: :cascade do |t|
     t.string   "name"
@@ -23,8 +28,9 @@ ActiveRecord::Schema.define(version: 20160118151102) do
     t.string   "location"
     t.text     "about_me"
     t.integer  "category_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "babysitter_image"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -41,10 +47,18 @@ ActiveRecord::Schema.define(version: 20160118151102) do
     t.string   "location"
     t.string   "rating"
     t.text     "about_me"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.integer  "user_id"
     t.integer  "category_id"
+    t.string   "childminder_image"
+  end
+
+  create_table "children", force: :cascade do |t|
+    t.integer  "age"
+    t.integer  "parent_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "locations", force: :cascade do |t|
@@ -79,6 +93,23 @@ ActiveRecord::Schema.define(version: 20160118151102) do
     t.text     "about_us"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "parents", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "phone_number"
+    t.string   "email"
+    t.string   "location"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string   "comment"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

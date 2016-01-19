@@ -1,4 +1,7 @@
 class Babysitter < ActiveRecord::Base
-   belongs_to :categories
-  has_many :users
+  has_many :child, through: :babysitter_child
+
+
+
+  mount_uploader :babysitter_image, BabysitterImageUploader
 end

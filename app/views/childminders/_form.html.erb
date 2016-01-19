@@ -39,6 +39,14 @@
     <%= f.label :about_me %><br>
     <%= f.text_area :about_me %>
   </div>
+  <div class="field">
+    <%= f.label :remote_childminder_image_url %><br />
+    <%= f.text_field :remote_childminder_image_url %>
+  </div>
+  <div class="field">
+    <%= f.label :childminder_image %><br />
+    <%= f.file_field :childminder_image %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -3,6 +3,8 @@ gem 'better_errors'
 gem 'faker'
 gem 'devise'
 gem 'cancancan'
+gem 'carrierwave'
+gem 'rmagick'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

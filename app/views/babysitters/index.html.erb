@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Image</th>
       <th>Name</th>
       <th>Phone</th>
       <th>Email</th>
@@ -18,6 +19,7 @@
   <tbody>
     <% @babysitters.each do |babysitter| %>
       <tr>
+        <td><%= image_tag babysitter.babysitter_image.url %></td>
         <td><%= babysitter.name %></td>
         <td><%= babysitter.phone %></td>
         <td><%= babysitter.email %></td>

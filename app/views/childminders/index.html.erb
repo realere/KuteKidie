@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>image</th>
       <th>Name</th>
       <th>No of children</th>
       <th>Phone number</th>
@@ -19,6 +20,7 @@
   <tbody>
     <% @childminders.each do |childminder| %>
       <tr>
+        <td><%= image_tag childminder.childminder_image.url %></td>
         <td><%= childminder.name %></td>
         <td><%= childminder.no_of_children %></td>
         <td><%= childminder.phone_number %></td>
@@ -26,6 +28,7 @@
         <td><%= childminder.location %></td>
         <td><%= childminder.rating %></td>
         <td><%= childminder.about_me %></td>
+
         <td><%= link_to 'Show', childminder %></td>
         <td><%= link_to 'Edit', edit_childminder_path(childminder) %></td>
         <td><%= link_to 'Destroy', childminder, method: :delete, data: { confirm: 'Are you sure?' } %></td>

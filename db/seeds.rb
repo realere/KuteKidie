@@ -32,17 +32,17 @@ end
   puts "babysitter #{b.name} created"
 end
 
-# 25.times do |i|
-#   n = Nanny.new
-#   n.name = Faker::Name.name
-#   n.age = prng.rand(25)+1
-#   n.phone = Faker::PhoneNumber.cell_phone
-#   n.email = Faker::Internet.safe_email(n.name)
-#   n.location = Faker::Address.city
-#   n.about_me = Faker::Lorem.paragraph
-#   n.save
-#   puts "babysitter #{b.name} created"
-# end
+25.times do |i|
+  n = Nanny.new
+  n.name = Faker::Name.name
+  n.age = prng.rand(25)+1
+  n.phone_number = Faker::PhoneNumber.cell_phone
+  n.email = Faker::Internet.safe_email(n.name)
+  n.location = Faker::Address.city
+  n.about_me = Faker::Lorem.paragraph
+  n.save
+  puts "nanny #{n.name} created"
+end
 
 
 
