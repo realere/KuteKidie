@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 gem 'better_errors'
 gem 'faker'
-gem 'devise'
 gem 'cancancan'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'devise'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

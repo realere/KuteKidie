@@ -6,43 +6,43 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+require 'faker'
+include Faker
+
+
+locations = %w('Aberdeen', 'Airdrie', 'Alloa', 'Arbroath', 'Ayr', 'Barrhead', 'Bathgate', 'Bearsden', 'Bellshill', 'Bishopbriggs', 'Blantyre', 'Bonnyrigg', 'Broxburn', 'Cambuslang', 'Clydebank', 'Coatbridge','Cumbernauld', 'Dumbarton', 'Dumfries', 'Dundee', 'Dunfermline', 'East Kilbride', 'Edinburgh', 'Elgin', 'Erskine' ,'Falkirk', 'Glasgow', 'Glenrothes', 'Grangemouth', 'Greenock', 'Hamilton', 'Inverness', 'Irvine', 'Johnstone', 'Kilmarnock', 'Kilwinning', 'Kirkcaldy and Dysart', 'Kirkintilloch', 'Larkhall', 'Livingston', 'Motherwell', 'Musselburgh', 'Newton Mearns', 'Paisley', 'Penicuik', 'Perth', 'Peterhead', 'Port Glasgow', 'Renfrew', 'Rutherglen', 'St Andrews', 'Stirling', 'Viewpark', 'Wishaw')
 prng = Random.new
 
-25.times do |i|
+
+ 5.times do |i|
+
+
+
+ # childminder = Childminder.create ( :name => "#{Name.name}",
+ #                                    :no_of_children => rand(1..3),
+ #                                    :phone_number => PhoneNumber.cell_phone,
+ #                                    :email => Faker::Internet.email,
+ #                                    :location => locations[rand(locations.lenght)],
+ #                                    :rating => rand(3..5),
+ #                                    :about_me => Lorem.paragraph.join("<br/>")
+ #                                    )
+
+                
+
+ #   puts childminder.inspect
+ #  end
+
+
   c = Childminder.new
   c.name = Faker::Name.name
+   # c.childminder_image = Faker::Avatar.image "https://robohash.org/sitsequiquia.png?size=300x300"
   c.no_of_children = prng.rand(3)+1
   c.phone_number = Faker::PhoneNumber.cell_phone
   c.email = Faker::Internet.safe_email(c.name)
-  c.location = Faker::Address.city
+  c.location = locations[rand(locations.length)]
   c.rating = prng.rand(4)+1
   c.about_me = Faker::Lorem.paragraph
   c.save
   puts "childminder #{c.name} created"
 end
-
-25.times do |i|
-  b = Babysitter.new
-  b.name = Faker::Name.name
-  b.phone = Faker::PhoneNumber.cell_phone
-  b.email = Faker::Internet.safe_email(b.name)
-  b.location = Faker::Address.city
-  b.about_me = Faker::Lorem.paragraph
-  b.save
-  puts "babysitter #{b.name} created"
-end
-
-25.times do |i|
-  n = Nanny.new
-  n.name = Faker::Name.name
-  n.age = prng.rand(25)+1
-  n.phone_number = Faker::PhoneNumber.cell_phone
-  n.email = Faker::Internet.safe_email(n.name)
-  n.location = Faker::Address.city
-  n.about_me = Faker::Lorem.paragraph
-  n.save
-  puts "nanny #{n.name} created"
-end
-
-
 

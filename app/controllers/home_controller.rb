@@ -6,35 +6,16 @@ class HomeController < ApplicationController
   end
   
   
-  def categories
-    
-  end
-
-  def babysitters
-    
-  end
-  
   def childminders
     
   end
 
-  def nurseries
-    
-  end
-  
-  def locations
-    
-  end
-  
   
   
   def search
     case params[:options]
 
-    when 'categories' then redirect_to(categories_path)
-    when 'babysitters' then redirect_to(babysitters_path)
     when 'childminders' then redirect_to(childminders_path)
-    when 'nurseries' then redirect_to(nurseries_path)
       
       
     

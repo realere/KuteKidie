@@ -1,13 +1,12 @@
 Rails.application.routes.draw do
  
-  devise_for :users
+  # resources :users
+  resources :friendships
  resources :babysitters
  resources :categories
  resources :childminders
- resources :nurseries
- resources :nannies
 
-  # devise_for :users
+  devise_for :users
   # resources :events
   # resources :venues
   # resources :artists
@@ -17,13 +16,10 @@ Rails.application.routes.draw do
 
 
 
-   root to: 'home#welcome'
+   root to: 'home#childminders'
     get '/welcome', to: 'home#welcome'
-    get '/nurseries', to: 'home#nurseries'
     get '/categories', to: 'home#categories'
-    get '/babysitters', to: 'home#babysitters'
     get '/childminders', to: 'home#childminders'
-    get '/nannies', to: 'home#nannies'
     get '/search', to: 'home#search'
 
     
