@@ -10,7 +10,10 @@
       </ul>
     </div>
   <% end %>
-
+ <div class="field">
+   <%= f.label :childminder_image %><br />
+   <%= f.file_field :childminder_image %>
+ </div>
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
