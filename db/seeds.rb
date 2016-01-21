@@ -10,22 +10,12 @@ require 'faker'
 include Faker
 
 
-locations = %w('Aberdeen', 'Airdrie', 'Alloa', 'Arbroath', 'Ayr', 'Barrhead', 'Bathgate', 'Bearsden', 'Bellshill', 'Bishopbriggs', 'Blantyre', 'Bonnyrigg', 'Broxburn', 'Cambuslang', 'Clydebank', 'Coatbridge','Cumbernauld', 'Dumbarton', 'Dumfries', 'Dundee', 'Dunfermline', 'East Kilbride', 'Edinburgh', 'Elgin', 'Erskine' ,'Falkirk', 'Glasgow', 'Glenrothes', 'Grangemouth', 'Greenock', 'Hamilton', 'Inverness', 'Irvine', 'Johnstone', 'Kilmarnock', 'Kilwinning', 'Kirkcaldy and Dysart', 'Kirkintilloch', 'Larkhall', 'Livingston', 'Motherwell', 'Musselburgh', 'Newton Mearns', 'Paisley', 'Penicuik', 'Perth', 'Peterhead', 'Port Glasgow', 'Renfrew', 'Rutherglen', 'St Andrews', 'Stirling', 'Viewpark', 'Wishaw')
+locations = %w( 'Aberdeen', 'Airdrie', 'Alloa', 'Arbroath', 'Ayr', 'Barrhead', 'Bathgate', 'Bearsden', 'Bellshill', 'Bishopbriggs', 'Blantyre', 'Bonnyrigg', 'Broxburn', 'Cambuslang', 'Clydebank', 'Coatbridge','Cumbernauld', 'Dumbarton', 'Dumfries', 'Dundee', 'Dunfermline', 'East Kilbride', 'Edinburgh', 'Elgin', 'Erskine' ,'Falkirk', 'Glasgow', 'Glenrothes', 'Grangemouth', 'Greenock', 'Hamilton', 'Inverness', 'Irvine', 'Johnstone', 'Kilmarnock', 'Kilwinning', 'Kirkcaldy and Dysart', 'Kirkintilloch', 'Larkhall', 'Livingston', 'Motherwell', 'Musselburgh', 'Newton Mearns', 'Paisley', 'Penicuik', 'Perth', 'Peterhead', 'Port Glasgow', 'Renfrew', 'Rutherglen', 'St Andrews', 'Stirling', 'Viewpark', 'Wishaw')
 prng = Random.new
 
 
  5.times do |i|
 
-
-
- # childminder = Childminder.create ( :name => "#{Name.name}",
- #                                    :no_of_children => rand(1..3),
- #                                    :phone_number => PhoneNumber.cell_phone,
- #                                    :email => Faker::Internet.email,
- #                                    :location => locations[rand(locations.lenght)],
- #                                    :rating => rand(3..5),
- #                                    :about_me => Lorem.paragraph.join("<br/>")
- #                                    )
 
                 
 

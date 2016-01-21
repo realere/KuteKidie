@@ -24,11 +24,11 @@
         <td><%= childminder.name %></td>
         <td><%= childminder.no_of_children %></td>
         <td><%= childminder.phone_number %></td>
-        <td><%= childminder.email %></td>
+        <td><%= truncate(childminder.email, :length => 15) %></td>
         <td><%= childminder.location %></td>
         <td><%= childminder.rating %></td>
-        <td><%= childminder.about_me %></td>
-
+        <td><%= truncate(childminder.about_me, :length => 15) %></td>
+      
         <td><%= link_to 'Show', childminder %></td>
         <td><%= link_to 'Edit', edit_childminder_path(childminder) %></td>
         <td><%= link_to 'Destroy', childminder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
