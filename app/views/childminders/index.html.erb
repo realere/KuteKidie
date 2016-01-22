@@ -1,17 +1,30 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Childminders</h1>
+<%= search_form_for @search do |f|%>
+<div class="field">
 
+  <%= f.label :location_cont %>
+  <%= f.search_field :location_cont %>
+
+  <%= f.label :email_cont %>
+   <%= f.search_field :email_cont %>
+
+
+</div>
+<div class="action"><%= f.submit  "search"%></div>
+
+<% end %>
 <table>
   <thead>
     <tr>
       <th>image</th>
       <th>Name</th>
-      <th>No of children</th>
+      <th><%=sort_link @search, :no_of_children, "No of children"%></th>
       <th>Phone number</th>
       <th>Email</th>
-      <th>Location</th>
-      <th>Rating</th>
+      <th><%=sort_link @search, :location, "Location"%></th></th>
+      <th><%=sort_link @search, :rating, "Rating"%></th>
       <th>About me</th>
       <th colspan="3"></th>
     </tr>
@@ -40,3 +53,5 @@
 <br>
 
 <%= link_to 'New Childminder', new_childminder_path %>
+
+<% end

@@ -5,6 +5,7 @@ gem 'cancancan'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'devise'
+gem 'ransack'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

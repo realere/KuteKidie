@@ -4,7 +4,8 @@ class ChildmindersController < ApplicationController
   # GET /childminders
   # GET /childminders.json
   def index
-    @childminders = Childminder.all
+   @search = Childminder.ransack(params[:q])
+   @childminders = @search.result
   end
 
   # GET /childminders/1

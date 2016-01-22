@@ -55,11 +55,11 @@ class FriendshipsController < ApplicationController
   # DELETE /friendships/1.json
   
   def destroy
-  @friendship = current_user.friendships.find(params[:id])
-  @friendship.destroy
-  flash[:notice] = "Removed friendship."
-  redirect_to current_user
-end
+    @friendship = current_user.friendships.find(params[:id])
+    @friendship.destroy
+    flash[:notice] = "Removed friendship."
+    redirect_to current_user
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -69,6 +69,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def friendship_params
-      params.require(:friendship).permit(:user_id, :friend_id, :babysitter_id, :parent_id, :approved)
+      params.require(:friendship).permit(:user_id, :friend_id, :type, :approved)
     end
   end

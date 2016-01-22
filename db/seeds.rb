@@ -14,7 +14,7 @@ locations = %w( 'Aberdeen', 'Airdrie', 'Alloa', 'Arbroath', 'Ayr', 'Barrhead', '
 prng = Random.new
 
 
- 5.times do |i|
+ 100.times do |i|
 
 
                 
