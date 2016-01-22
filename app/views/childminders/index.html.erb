@@ -7,9 +7,11 @@
   <%= f.label :location_cont %>
   <%= f.search_field :location_cont %>
 
-  <%= f.label :email_cont %>
+  <%= f.label :no_of_children_cont %>
    <%= f.search_field :email_cont %>
 
+   <%= f.label :rating_cont %>
+    <%= f.search_field :rating_cont %>
 
 </div>
 <div class="action"><%= f.submit  "search"%></div>
@@ -53,5 +55,3 @@
 <br>
 
 <%= link_to 'New Childminder', new_childminder_path %>
-
-<% end
