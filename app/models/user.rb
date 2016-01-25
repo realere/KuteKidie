@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
 
   has_many :babysitter_friends, through: :friendships, source: :friend, source_type: 'Babysitter'
 
+  has_many :nanny_friends, through: :friendships, source: :friend, source_type: 'Nanny'
+
   def name 
      "#{self.first_name} #{self.last_name}" 
   end

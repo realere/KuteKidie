@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @nanny.name %>
+</p>
+
+
+<p>
+  <strong>No of children:</strong>
+  <%= @nanny.no_of_children %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @nanny.phone_number %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @nanny.email %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @nanny.location %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @nanny.rating %>
+</p>
+
+<p>
+  <strong>About me:</strong>
+  <%= @nanny.about_me %>
+</p>
+
+<h2>Added by Users</h2>
+<ul>
+  <%  @nanny.friendships.each do |friendship| %>
+    <li>
+      <%= friendship.user.name %>
+      (<%= link_to "remove", friendship, :method => :delete %>)
+    </li>
+  <% end %>
+</ul>
+
+
+
+
+<%= link_to 'Edit', edit_nanny_path(@nanny) %> |
+<%= link_to 'Back', nannies_path %>
