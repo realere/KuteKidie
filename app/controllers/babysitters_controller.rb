@@ -4,7 +4,8 @@ class BabysittersController < ApplicationController
   # GET /babysitters
   # GET /babysitters.json
   def index
-    @babysitters = Babysitter.all
+    @search = Babysitter.ransack(params[:q])
+       @babysitters = @search.result
   end
 
   # GET /babysitters/1
