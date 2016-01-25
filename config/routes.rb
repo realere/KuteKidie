@@ -1,17 +1,12 @@
 Rails.application.routes.draw do
  
-  # resources :users
   resources :friendships
  resources :babysitters
  resources :categories
  resources :childminders
 
   devise_for :users
-  # resources :events
-  # resources :venues
-  # resources :artists
-  # resources :categories
-  # resources :tickets
+ 
   # resources :whats_on
 
 
@@ -20,7 +15,8 @@ Rails.application.routes.draw do
     get '/welcome', to: 'home#welcome'
     get '/categories', to: 'home#categories'
     get '/childminders', to: 'home#childminders'
-    get '/search', to: 'home#search'
+    get '/babysitters', to: 'home#babysitters'
+  
 
     
     # get '/artists', to: 'home#artists '

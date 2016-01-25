@@ -2,18 +2,20 @@
 
 one:
   name: MyString
-  phone: 1
+  no_of_children: 1
+  phone_number: MyString
   email: MyString
   location: MyString
+  rating: MyString
   about_me: MyText
   user_id: 1
-  category_id: 1
 
 two:
   name: MyString
-  phone: 1
+  no_of_children: 1
+  phone_number: MyString
   email: MyString
   location: MyString
+  rating: MyString
   about_me: MyText
   user_id: 1
-  category_id: 1

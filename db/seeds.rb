@@ -34,6 +34,19 @@ prng = Random.new
   c.about_me = Faker::Lorem.paragraph
   c.save
   puts "childminder #{c.name} created"
+
+
+
+  b = Babysitter.new
+  b.name = Faker::Name.name
+  b.no_of_children = prng.rand(1..3)
+  b.phone_number = Faker::PhoneNumber.cell_phone
+  b.email = Faker::Internet.safe_email(b.name)
+  b.location = location[rand(location.length)]
+  b.rating = prng.rand(3..5)
+  b.about_me = Faker::Lorem.paragraph
+  b.save
+  puts "babysitter #{b.name} created"
 end
 
 
