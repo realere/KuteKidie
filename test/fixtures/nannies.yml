@@ -2,22 +2,22 @@
 
 one:
   name: MyString
-  age: MyString
-  no_of_children: 1
+  gender: MyString
+  no_of_children: MyString
   phone_number: MyString
   email: MyString
   location: MyString
   rating: MyString
   about_me: MyText
-  category_id: 1
+  user_id: 1
 
 two:
   name: MyString
-  age: MyString
-  no_of_children: 1
+  gender: MyString
+  no_of_children: MyString
   phone_number: MyString
   email: MyString
   location: MyString
   rating: MyString
   about_me: MyText
-  category_id: 1
+  user_id: 1

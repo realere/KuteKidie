@@ -41,12 +41,14 @@
   <%= @childminder.about_me %>
 </p>
 
+<!-- for friendship in -->
 
-<h2>Friends</h2>
+
+<h2>Added by Users</h2>
 <ul>
-  <% for friendship in @childminder.friendships %>
+  <%  @childminder.friendships.each do |friendship| %>
     <li>
-      <%=h friendship.user.first_name %>
+      <%= friendship.user.name %>
       (<%= link_to "remove", friendship, :method => :delete %>)
     </li>
   <% end %>

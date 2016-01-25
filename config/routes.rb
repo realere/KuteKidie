@@ -4,6 +4,8 @@ Rails.application.routes.draw do
  resources :babysitters
  resources :categories
  resources :childminders
+ resources :nannies
+
 
   devise_for :users
  
@@ -16,11 +18,11 @@ Rails.application.routes.draw do
     get '/categories', to: 'home#categories'
     get '/childminders', to: 'home#childminders'
     get '/babysitters', to: 'home#babysitters'
+    get '/nurseries', to: 'home#nurseries'
+    get '/nannies', to: 'home#nannies'
   
 
     
-    # get '/artists', to: 'home#artists '
-    # get '/Tickets', to: 'home#tickets'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

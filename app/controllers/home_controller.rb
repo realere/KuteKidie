@@ -14,5 +14,9 @@ class HomeController < ApplicationController
     
   end
 
+  def nannies
+    
+  end
+
   
 end

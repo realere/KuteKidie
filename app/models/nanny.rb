@@ -1,5 +1,4 @@
-class Babysitter < ActiveRecord::Base
-
+class Nanny < ActiveRecord::Base
 
   has_many :reviews
   has_many :friendships, as: :friend
@@ -9,12 +8,5 @@ class Babysitter < ActiveRecord::Base
   def friends_with?(user)
     friends.include? user
   end
-
-
-
-  
 end
-
-
-
 
