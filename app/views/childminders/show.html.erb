@@ -41,25 +41,19 @@
   <%= @childminder.about_me %>
 </p>
 
+<!-- for friendship in -->
 
-<!-- <h2>Friends</h2>
+<h2>Added by Users</h2>
 <ul>
-  <% for friendship in @user.friendships %>
+  <%  @childminder.friendships.each do |friendship| %>
     <li>
-      <%=h friendship.friend.username %>
+      <%= friendship.user.name %>
       (<%= link_to "remove", friendship, :method => :delete %>)
     </li>
   <% end %>
 </ul>
 
-<p><%= link_to "Find Friends", users_path %></p>
 
-<h2>Friended by Users</h2>
-<ul>
-  <% for user in @user.inverse_friends %>
-    <li><%=h user.username %></li>
-  <% end %>
-</ul> -->
 
 <%= link_to 'Edit', edit_childminder_path(@childminder) %> |
 <%= link_to 'Back', childminders_path %>

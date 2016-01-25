@@ -26,7 +26,7 @@ class FriendshipsController < ApplicationController
   
 
   def create
-    @friendship = current_user.friendship.build(:friend_id => params[:friend_id], friend_type: 'Childminder')
+    @friendship = current_user.friendships.build(:friend_id => params[:friend_id], friend_type: 'Childminder')
     if @friendship.save
       flash[:notice] = "Added friend."
       redirect_to root_url
