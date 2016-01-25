@@ -3,8 +3,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
 
-   has_many :childminder_friendships
-   has_many :childminder_friends, through: :childminder_friendships, source: :friend
+   has_many :friendships
+   has_many :childminder_friends, through: :friendships, source: :friend, source_type: 'Childminder'
 
 
 end

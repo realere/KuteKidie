@@ -43,7 +43,8 @@
         <td><%= childminder.location %></td>
         <td><%= childminder.rating %></td>
         <td><%= truncate(childminder.about_me, :length => 15) %></td>
-      
+
+        <td><%= link_to "Add Friend", friendships_path(:friend_id => childminder), :method => :post %></td>
         <td><%= link_to 'Show', childminder %></td>
         <td><%= link_to 'Edit', edit_childminder_path(childminder) %></td>
         <td><%= link_to 'Destroy', childminder, method: :delete, data: { confirm: 'Are you sure?' } %></td>

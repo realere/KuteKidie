@@ -34,9 +34,9 @@ ActiveRecord::Schema.define(version: 20160121144949) do
     t.integer  "user_id"
     t.integer  "friend_id"
     t.boolean  "approved"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "type"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "friend_type"
   end
 
   create_table "reviews", force: :cascade do |t|

@@ -6,7 +6,7 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'devise'
 gem 'ransack'
-
+gem 'will_paginate', '~> 3.0', '>= 3.0.7'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
