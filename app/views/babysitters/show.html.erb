@@ -1,5 +1,15 @@
+<div class="show-babysitter">
 <p id="notice"><%= notice %></p>
 
+
+  <p>
+    <b>Image:</b>
+  </p>
+  <%= link_to image_tag(@babysitter.babysitter_image.thumb.url), @babysitter.babysitter_image.medium.url %>
+    <!-- <p>
+      <b>Image:</b>
+      <%= image_tag @babysitter.babysitter_image.url %>
+  </p> -->
 <p>
   <strong>Name:</strong>
   <%= @babysitter.name %>
@@ -39,3 +49,4 @@
 
 <%= link_to 'Edit', edit_babysitter_path(@babysitter) %> |
 <%= link_to 'Back', babysitters_path %>
+</div>

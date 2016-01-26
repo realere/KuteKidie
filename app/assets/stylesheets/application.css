@@ -422,14 +422,13 @@ there.
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
 
-
+.show-babysitters {
+  margin: 50px;
+}
 
 /*img {
-  width: 400px;
-  height: 400px;
-  border: 1px solid #6B1229;
-}*/
-
-/*form*/
-
+    width: 100px;
+    height: 100px;
+    border: 1px solid #6B1229;
+  }*/
 

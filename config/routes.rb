@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
 
 
-   root to: 'home#childminders'
+   root to: 'home#welcome'
     get '/welcome', to: 'home#welcome'
     get '/categories', to: 'home#categories'
     get '/childminders', to: 'home#childminders'
