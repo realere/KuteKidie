@@ -1,11 +1,9 @@
 <p id="notice"><%= notice %></p>
   <p>
     <b>Image:</b>
-    <%= image_tag @childminder.childminder_image.url %>
+    <%= link_to image_tag(@childminder.childminder_image.large.url) %>
 </p>
-<!-- <p>
-<%= link_to image_tag(@childminder.childminder_image.thumb.url), @childminder.childminder_image.medium.url %>
-</p> -->
+
 <p>
   <strong>Name:</strong>
   <%= @childminder.name %>

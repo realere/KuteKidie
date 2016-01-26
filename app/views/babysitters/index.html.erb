@@ -2,7 +2,7 @@
 
 <h1>Listing Babysitters</h1>
 <%= search_form_for @search do |f|%>
-<div class="field">
+<div class="search">
 
   <%= f.label :location_cont %>
   <%= f.search_field :location_cont %>
@@ -20,6 +20,7 @@
 <table>
   <thead>
     <tr>
+      <th>Image</th>
       <th>Name</th>
       <th><%=sort_link @search, :no_of_children, "No of children"%></th>
       <th>Phone number</th>
@@ -34,6 +35,7 @@
   <tbody>
     <% @babysitters.each do |babysitter| %>
       <tr>
+      <td><%= link_to image_tag(@childminder.childminder_image.thumb.url) %></td>
         <td><%= babysitter.name %></td>
         <td><%= babysitter.no_of_children %></td>
         <td><%= babysitter.phone_number %></td>

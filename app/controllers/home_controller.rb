@@ -11,7 +11,7 @@ class HomeController < ApplicationController
   end
 
   def babysitters
-    
+    @babysitters = Babysitter.all
   end
 
   def nannies

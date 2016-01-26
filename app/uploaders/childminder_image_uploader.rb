@@ -36,9 +36,12 @@ class ChildminderImageUploader < CarrierWave::Uploader::Base
     process :resize_to_fit => [100, 100]
    end
 
-   
    version :medium do
      process :resize_to_fit => [400, 400]
+   end
+
+   version :large do
+     process :resize_to_fit => [600, 600]
    end
 
 

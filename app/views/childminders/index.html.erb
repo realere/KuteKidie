@@ -35,7 +35,7 @@
   <tbody>
     <% @childminders.each do |childminder| %>
       <tr>
-        <td><%= image_tag childminder.childminder_image.url %></td>
+        <td><%= image_tag childminder.childminder_image.thumb.url %></td>
         <td><%= childminder.name %></td>
         <td><%= childminder.no_of_children %></td>
         <td><%= childminder.phone_number %></td>
