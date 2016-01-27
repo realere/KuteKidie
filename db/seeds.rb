@@ -33,7 +33,7 @@ prng = Random.new
   c.location = location[rand(location.length)]
   c.rating = prng.rand(3..5)
   c.about_me = Faker::Lorem.paragraph
-  c.save
+  c.save!
   puts "childminder #{c.name} created"
 
 
@@ -46,7 +46,7 @@ prng = Random.new
   b.location = location[rand(location.length)]
   b.rating = prng.rand(3..5)
   b.about_me = Faker::Lorem.paragraph
-  b.save
+  b.save!
   puts "babysitter #{b.name} created"
 
 
@@ -59,7 +59,7 @@ prng = Random.new
   n.location = location[rand(location.length)]
   n.rating = prng.rand(3..5)
   n.about_me = Faker::Lorem.paragraph
-  n.save
+  n.save!
   puts "nanny #{n.name} created"
 
 end
