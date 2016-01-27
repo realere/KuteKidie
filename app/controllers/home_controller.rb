@@ -1,8 +1,9 @@
 class HomeController < ApplicationController
   
-  
   def welcome
-    
+    @childminders = Childminder.all
+    @babysitters = Babysitter.all
+    @nannies =Nanny.all
   end
   
   
@@ -11,7 +12,7 @@ class HomeController < ApplicationController
   end
 
   def babysitters
-    @babysitters = Babysitter.all
+
   end
 
   def nannies
