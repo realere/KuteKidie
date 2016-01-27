@@ -14,4 +14,8 @@ class User < ActiveRecord::Base
      "#{self.first_name} #{self.last_name}" 
   end
 
+  def role?(role_to_compare)
+    self.role.to_s == role_to_compare.to_s
+  end
+
 end

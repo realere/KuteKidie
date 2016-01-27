@@ -6,43 +6,33 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-<div class='login'>
-  <% if current_user %>
-    <%= current_user.email %>
-    <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-  <% else %>
-    <%= link_to "Sign In", new_user_session_path %>
-    <%= link_to "Register", new_user_registration_path %>
-  <% end %>
-</div>
+<body class= "home">
+  <header>
+    <div class="nav">
 
-<!-- <span href="#" class="button" id="toggle-login">Log in</span>
+      
+     <p class="notice"><%= notice %></p>
+     <p class="alert"><%= alert %></p>
+     <ul>
+       <li> <%= link_to "Home", root_path%></li>
+       <li> <%= link_to "Childminders", childminders_path %></li>
+       <li> <%= link_to "Babysitters", babysitters_path %></li>
+       <li> <%= link_to "Nannies", nannies_path %></li>
+       <div class="login">
+         <% if current_user %>
+         <% current_user.email %>
+         <li> <%=link_to "Log out", destroy_user_session_path, method: :delete %></li>
+         <% else %>
+         <li><%= link_to "My Account", new_user_session_path %></li>
+         <li><%= link_to "Join In", new_user_registration_path %></li>
+         <% end %>
+       </div>
+     </ul>
+   </nav> 
+ </div>
+ 
 
-<div id="login">
-  <div id="triangle"></div>
-  <h1>Log in</h1>
-  <form>
-    <input type="email" placeholder="Email" />
-    <input type="password" placeholder="Password" />
-    <input type="submit" value="Log in" />
-  </form>
-</div> -->
-
-
-<nav>
- <ul>
- <p class="notice"><%= notice %></p>
- <p class="alert"><%= alert %></p>
-
-  <li class="home"><%= link_to "Home", root_path%></li>
-  <li class="childminders"><%= link_to "Childminders", childminders_path %></li>
-  <li class="babysitters"><%= link_to "Babysitters", babysitters_path %></li>
-  <li class="nannies"><%= link_to "Nannies", nannies_path %></li>
-</ul>
-</nav> 
-
-<%= yield %>
-
+ <%= yield %>
+</header>
 </body>
 </html>

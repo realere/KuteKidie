@@ -13,7 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= jquery.dropotron.min
+//= skel.min
+//= skel-layers.min
+//= init
 //= require_tree .
+
 $('#toggle-login').click(function(){
   $('#login').toggle();
 });

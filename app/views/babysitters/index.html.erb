@@ -36,7 +36,7 @@
   <tbody>
     <% @babysitters.each do |babysitter| %>
       <tr>
-      <td><%= link_to image_tag(@childminder.childminder_image.thumb.url) %></td>
+
         <td><%= babysitter.name %></td>
         <td><%= babysitter.no_of_children %></td>
         <td><%= babysitter.phone_number %></td>

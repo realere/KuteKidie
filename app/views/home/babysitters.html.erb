@@ -1,1 +1,42 @@
 <h4>Find local babysitters in your area.</h4>
+<h4>Find local Child care services in your area.</h4>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>No of children</th>
+      <th>Phone number</th>
+      <th>Email</th>
+      <th>Location</th>
+      <th>Rating</th>
+      <th>About me</th>
+     
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nannies.each do |nanny| %>
+      <tr>
+        <td><%= nanny.name %></td>
+        <td><%= nanny.no_of_children %></td>
+        <td><%= nanny.phone_number %></td>
+        <td><%= truncate(nanny.email, :length => 15) %></td>
+        <td><%= nanny.location %></td>
+        <td><%= nanny.rating %></td>
+        <td><%= truncate(nanny.about_me, :length => 15 )%></td>
+        <td><%= link_to "Add Friend", friendships_path(:friend_id => nanny), :method => :post %></td>
+        <td><%= link_to 'Show', nanny %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+Childminders:
+<%= render @childminders %>
+<br>
+Babysitters:
+<%= render @babysitters %>
