@@ -1,7 +1,7 @@
 class ChildmindersController < ApplicationController
-  
+  # load_and_authorize_resource
   before_action :set_childminder, only: [:show, :edit, :update, :destroy]
-  load_and_authorize_resource
+ 
   # GET /childminders
   # GET /childminders.json
   def index

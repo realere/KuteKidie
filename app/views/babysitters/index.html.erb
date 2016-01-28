@@ -42,6 +42,7 @@
 
   <% end %>
 
+
   <table>
     <thead>
 >>>>>>> develop
@@ -62,7 +63,7 @@
     <tbody>
       <% @babysitters.each do |babysitter| %>
       <tr>
-
+        <td><%= image_tag babysitter.babysitter_image.thumb.url %></td>
         <td><%= babysitter.name %></td>
         <td><%= babysitter.no_of_children %></td>
         <td><%= babysitter.phone_number %></td>
@@ -80,8 +81,7 @@
       <% end %>
     </tbody>
   </table>
-
-  <br>
-
-  <%= link_to 'New Babysitter', new_babysitter_path %>
 </div>
+<br>
+
+<%= link_to 'New Babysitter', new_babysitter_path %>
