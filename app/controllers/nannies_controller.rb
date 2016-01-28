@@ -1,6 +1,6 @@
 class NanniesController < ApplicationController
   
-  load_and_authorize_resource
+  # load_and_authorize_resource
   before_action :set_nanny, only: [:show, :edit, :update, :destroy]
 
   # GET /nannies

@@ -1,3 +1,74 @@
 // Place all the styles related to the friendships controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+[
+p1.project_image = File.open(File.join(Rails.root, "db/images/clock.jpg"))
+p1.save!
+
+p2.project_image = File.open(File.join(Rails.root, "db/images/orchardsmall.jpg"))
+p2.save!
+
+p3.project_image = File.open(File.join(Rails.root, "db/images/playbus.jpg"))
+p3.save!
+
+p4.project_image = File.open(File.join(Rails.root, "db/images/fire_house.jpg"))
+p4.save!
+
+p5.project_image = File.open(File.join(Rails.root, "db/images/edsheeran.jpg"))
+p5.save!
+
+p6.project_image = File.open(File.join(Rails.root, "db/images/Procession.jpg"))
+p6.save!
+
+p7.project_image = File.open(File.join(Rails.root, "db/images/hospice.jpg"))
+p7.save!
+
+p8.project_image = File.open(File.join(Rails.root, "db/images/homeless.jpg"))
+p8.save!
+
+p9.project_image = File.open(File.join(Rails.root, "db/images/lightbox.png"))
+p9.save!
+
+p10.project_image = File.open(File.join(Rails.root, "db/images/ShoeBoxAppeal.jpg"))
+p10.save!
+
+p11.project_image = File.open(File.join(Rails.root, "db/images/studying-students.jpg"))
+p11.save!
+
+p12.project_image = File.open(File.join(Rails.root, "db/images/filmf.jpg"))
+p12.save!
+
+p13.project_image = File.open(File.join(Rails.root, "db/images/wonderful.jpg"))
+p13.save!
+
+p14.project_image = File.open(File.join(Rails.root, "db/images/bc.jpg"))
+p14.save!
+
+p15.project_image = File.open(File.join(Rails.root, "db/images/image.jpg"))
+p15.save!
+
+p16.project_image = File.open(File.join(Rails.root, "db/images/castle.jpg"))
+p16.save!
+
+p17.project_image = File.open(File.join(Rails.root, "db/images/lamp.jpg"))
+p17.save!
+
+p18.project_image = File.open(File.join(Rails.root, "db/images/business.jpg"))
+p18.save!
+
+ada.user_image = File.open(File.join(Rails.root, "db/images/ada.jpg"))
+ada.save!
+
+obedia.user_image = File.open(File.join(Rails.root, "db/images/obedia.png"))
+obedia.save!
+
+tristan.user_image = File.open(File.join(Rails.root, "db/images/tristan.jpg"))
+tristan.save!
+
+isolde.user_image = File.open(File.join(Rails.root, "db/images/isolde.jpg"))
+isolde.save!
+
+site_admin.user_image = File.open(File.join(Rails.root, "db/images/admin.png"))
+site_admin.save!

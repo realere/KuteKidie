@@ -29,6 +29,7 @@ prng = Random.new
    # c.childminder_image = Faker::Avatar.image "https://robohash.org/sitsequiquia.png?size=300x300"
   c.no_of_children = prng.rand(1..3)
   c.phone_number = Faker::PhoneNumber.cell_phone
+  c.childminder_image = childminder_image = File.open(File.join(Rails.root, "db/images/lady1.jpg"))
   c.email = Faker::Internet.safe_email(c.name)
   c.location = location[rand(location.length)]
   c.rating = prng.rand(3..5)
